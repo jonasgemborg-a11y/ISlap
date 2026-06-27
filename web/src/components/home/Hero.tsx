@@ -13,7 +13,7 @@ export function Hero() {
         </p>
         <div className={styles.actions}>
           <button className={styles.btnPrimary}>Enter the Arena</button>
-          <button className={styles.btnSecondary}>Read the Lore</button>
+          <a href="/wiki" className={styles.btnSecondary}>Read the Lore</a>
         </div>
       </div>
       <span className={styles.scroll}>▼ Scroll ▼</span>

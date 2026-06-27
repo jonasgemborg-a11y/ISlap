@@ -126,6 +126,7 @@
 }
 
 .btnSecondary {
+  display: inline-block;
   padding: 16px 48px;
   font-family: var(--font-title);
   font-size: 14px;
