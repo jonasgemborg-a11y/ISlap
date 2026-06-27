@@ -1,0 +1,108 @@
+.page {
+  min-height: 100vh;
+  padding: 120px var(--spacing-md) var(--spacing-xl);
+  background-image:
+    radial-gradient(ellipse 80% 60% at 50% 20%, rgba(60,10,10,0.12) 0%, transparent 70%);
+}
+
+.inner {
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  font-family: var(--font-title);
+  font-size: 11px;
+  letter-spacing: 6px;
+  color: var(--color-blood-bright);
+  text-align: center;
+  display: block;
+  margin-bottom: var(--spacing-md);
+  text-shadow: 0 0 10px rgba(192,16,16,0.4);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 5vw, 48px);
+  color: var(--color-text);
+  text-align: center;
+  letter-spacing: 4px;
+  text-shadow: 0 2px 0 #000, 0 0 20px rgba(139,10,10,0.3);
+  margin-bottom: var(--spacing-md);
+}
+
+.divider {
+  width: 300px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-blood), transparent);
+  margin: var(--spacing-md) auto var(--spacing-lg);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.body p {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.9;
+  color: var(--color-bone-dim);
+}
+
+.body strong {
+  color: var(--color-bone);
+}
+
+.body em {
+  color: var(--color-blood-bright);
+  font-style: italic;
+}
+
+/* First paragraph drop cap */
+.drop::first-letter {
+  font-family: var(--font-display);
+  font-size: 72px;
+  font-weight: 900;
+  float: left;
+  line-height: 0.8;
+  margin: 8px 12px 0 0;
+  color: var(--color-blood-bright);
+  text-shadow: 0 0 20px rgba(139,10,10,0.6), 2px 2px 0 #000;
+}
+
+.chapter {
+  font-family: var(--font-title);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--color-bone);
+  border-left: 2px solid var(--color-blood);
+  padding-left: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+}
+
+.quote {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 18px;
+  line-height: 2;
+  color: var(--color-bone);
+  text-align: center;
+  padding: var(--spacing-lg);
+  border-top: 1px solid var(--color-blood-dark);
+  border-bottom: 1px solid var(--color-blood-dark);
+  background: var(--color-bg-surface);
+  margin: var(--spacing-md) 0;
+}
+
+.footer {
+  font-family: var(--font-title);
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: var(--color-text-dim);
+  text-align: center;
+  margin-top: var(--spacing-lg);
+}

@@ -1,0 +1,66 @@
+@import './variables.css';
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=IM+Fell+English:ital@0;1&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.7;
+  min-height: 100vh;
+  /* Stone texture overlay */
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0,0,0,0.15) 2px,
+      rgba(0,0,0,0.15) 4px
+    ),
+    radial-gradient(ellipse at 20% 50%, rgba(60,10,10,0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(40,5,5,0.1) 0%, transparent 40%);
+}
+
+a {
+  color: var(--color-blood-bright);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+a:hover {
+  color: var(--color-bone);
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-title);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  line-height: 1.1;
+}
+
+/* Blood drip keyframe */
+@keyframes drip {
+  0%   { transform: scaleY(0); opacity: 1; }
+  80%  { transform: scaleY(1); opacity: 1; }
+  100% { transform: scaleY(1); opacity: 0.8; }
+}
+
+/* Flicker for torches */
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.85; }
+  75%       { opacity: 0.95; }
+}

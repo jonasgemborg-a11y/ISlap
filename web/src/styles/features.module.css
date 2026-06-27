@@ -1,0 +1,111 @@
+.section {
+  padding: var(--spacing-xl) var(--spacing-md);
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Jagged top border */
+.section::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-blood-dark), var(--color-blood), var(--color-blood-dark), transparent);
+  margin-bottom: var(--spacing-xl);
+  clip-path: polygon(
+    0 50%, 2% 0, 4% 100%, 6% 20%, 8% 80%, 10% 0, 12% 100%,
+    14% 30%, 16% 70%, 18% 0, 20% 100%, 22% 40%, 24% 60%,
+    26% 0, 28% 100%, 30% 20%, 32% 80%, 34% 0, 36% 100%,
+    38% 30%, 40% 70%, 42% 0, 44% 100%, 46% 40%, 48% 60%,
+    50% 0, 52% 100%, 54% 20%, 56% 80%, 58% 0, 60% 100%,
+    62% 30%, 64% 70%, 66% 0, 68% 100%, 70% 40%, 72% 60%,
+    74% 0, 76% 100%, 78% 20%, 80% 80%, 82% 0, 84% 100%,
+    86% 30%, 88% 70%, 90% 0, 92% 100%, 94% 40%, 96% 60%,
+    98% 0, 100% 50%
+  );
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 6vw, 56px);
+  color: var(--color-text);
+  text-align: center;
+  margin-bottom: 8px;
+  letter-spacing: 8px;
+  text-shadow: 0 0 30px rgba(139,10,10,0.4), 0 2px 0 #000;
+}
+
+.headingSub {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 15px;
+  color: var(--color-text-muted);
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  letter-spacing: 2px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.card {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-top: 2px solid var(--color-blood-dark);
+  padding: var(--spacing-lg);
+  position: relative;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  clip-path: polygon(
+    0 0, calc(100% - 12px) 0, 100% 12px,
+    100% 100%, 12px 100%, 0 calc(100% - 12px)
+  );
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, var(--color-blood-dark), var(--color-blood), var(--color-blood-dark));
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.card:hover {
+  border-color: var(--color-border-light);
+  box-shadow: 0 0 20px rgba(139,10,10,0.15), inset 0 0 40px rgba(0,0,0,0.3);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.icon {
+  font-size: 32px;
+  margin-bottom: var(--spacing-md);
+  display: block;
+  filter: drop-shadow(0 0 6px rgba(139,10,10,0.5));
+}
+
+.cardTitle {
+  font-family: var(--font-title);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-bone);
+  margin-bottom: var(--spacing-sm);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.cardDesc {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+}
