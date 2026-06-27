@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc *)",
+      "Bash(Remove-Item \"C:\\\\Users\\\\jonas\\\\ISlap\\\\islap\\\\src\\\\components\\\\minigames\" -Recurse -Force)"
+    ]
+  }
+}

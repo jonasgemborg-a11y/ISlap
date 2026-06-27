@@ -1,0 +1,6 @@
+# .NET build output
+server/ISlap/obj/
+server/ISlap/bin/
+
+# Node
+islap/node_modules/
